@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+table {
+font-family: 'Nunito Sans', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tableheader td{
+    transform: translate(0px, 120px) rotate(270deg);
+    max-width: 20px;
+    height: 400px;
+    white-space: nowrap;
+   
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+img{
+  width: 500px;
+}
+
+#charts td{
+    margin:10px;
+    border-radius:15px;
+    text-align: center;
+}
+ h2{
+    text-align: center;
+}
+input[type="number"] {
+    width: 100px;
+    border: none;
+    background-color:transparent;
+}
+input[type="number"]:focus-visible{
+     border: none;
+     outline:none;
+}
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+</style>
+</head>
+<body>
+ <h2>Cardiology</h2>
+ <form action="savecardiology.php" method="post">
+
+<table>
+
+    <tbody>
+    <tr>
+        <th style="background-color: #ff00ff;">Claim</th>
+        <th colspan="13" style="background-color:#ffd966 ;" >Process Parameters (13)</th>
+        <th colspan="14" style="background-color:#ffff00 ;">Primary Medication (14)</th>
+        <th colspan="11" style="background-color: #00ff00;">Secondary Medication (11)</th>
+        <th colspan="5" style="background-color:#00ffff ;">Complications (5)</th>
+        <th style="background-color:#9900ff; width:200px;">Parameters (43)</th>
+    </tr>
+  <tr class="tableheader">
+    <th>Health Insurance Claim</th>
+    <td>Inpatient Surgical</td>
+    <td>Non Intervention Medical Line</td>
+    <td>Pacemaker</td>
+    <td>Surgery</td>
+    <td>Complex Surgery</td>
+    <td>Consultation</td>
+    <td>Prescription Cost</td>
+    <td>Check-up</td>
+    <td>Images / Scans</td>
+    <td>Medication</td>
+    <td>ICU</td>
+    <td>Hospital Room</td>
+    <td>Post Release Car</td>
+    <td>Coronary Angiogram</td>
+    <td>Vessel involvement number: 1, 2, 3</td>
+    <td>LAD</td>
+    <td>RCA</td>
+    <td>LCX</td>
+    <td>Extent of Blocks</td>
+    <td>No. of Blocks</td>
+    <td>Ostial Blocks (Y/N)</td>
+    <td>Calcium (CAC Score)</td>
+    <td>Echo Findings General</td>
+    <td>Echo Findings Ejection Fraction</td>
+    <td>ECG</td>
+    <td>Excercise Stress test</td>
+    <td>Chest X-Ray</td>
+    <td>Diabetes Mellitus</td>
+    <td>Hypertension</td>
+    <td>Lipid Profile</td>
+    <td>Obesity</td>
+    <td>Metabolic Syndrome</td>
+    <td>Excersie</td>
+    <td>Diet</td>
+    <td>Stress</td>
+    <td>Tobacco Use</td>
+    <td>Drug Use</td>
+    <td>Family History</td>
+    <td>Irregular or atypical heart rhythms(arrhythmias)</td>
+    <td>Cardiogenic Shock</td>
+    <td>Heart Failure</td>
+    <td>Pericarditis</td>
+    <td>Cardiac Arrest</td>
+    <th>Health Score</th>
+  </tr>
+  <tr>
+    <td>Patient 1</td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total1" min="0" max="100" placeholder="0"></td>
+  
+    <td  style="background-color: #00ff00;"><input type="number" id="sum1" name="sum1" min="0" max="1000" placeholder="0"></td>
+  </tr>
+  <tr>
+    <td>Patient 2</td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total2" min="0" max="100" placeholder="0"></td>
+    <td style="background-color:#ffff00 ;"><input type="number" id="sum2" name="sum2" min="0" max="1000" placeholder="0"></td>
+  </tr>
+  <tr>
+    <td>Patient 3</td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total3" min="0" max="100" placeholder="0"></td>
+    <td style="background-color:#ffd966 ;"><input type="number" id="sum3" name="sum3" min="0" max="1000" placeholder="0"></td>
+  </tr>
+  <tr>
+    <td>Patient 4</td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total4" min="0" max="100" placeholder="0"></td>
+    <td style="background-color: #ff9900;"><input type="number" id="sum4" name="sum4" min="0" max="1000" placeholder="0"></td>
+  </tr>
+  <tr>
+    <td>Patient 5</td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td><input type="number" class="total5" min="0" max="100" placeholder="0"></td>
+    <td style="background-color: #ff0000;"><input type="number" id="sum5" name="sum5" min="0" max="1000" placeholder="0"></td>
+    </tbody>
+  </tr>
+
+</table><br>
+<input type="submit" class="btn btn-primary">
+</form>
+<table id="charts" style="margin-top: 50px;">
+    <tr>
+        <td><img src="imgs/1561.png"></td>
+        <td><img src="imgs/dfd1.png"></td>
+    </tr>
+
+    <tr>
+      <td><img src="imgs/chart1.png"></td>
+      <td><img src="imgs/aszad1.png"></td>
+  </tr>
+</table>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+            //iterate through each textboxes and add keyup
+            //handler to trigger sum event
+            
+             $(".total1").each(function () {
+                $(this).keyup(function () {
+                    calculateSum1();
+                });
+            });
+            
+            $(".total2").each(function () {
+                $(this).keyup(function () {
+                    calculateSum2();
+                });
+            });
+            
+            $(".total3").each(function () {
+                $(this).keyup(function () {
+                    calculateSum3();
+                });
+            });
+            
+            
+            $(".total4").each(function () {
+                $(this).keyup(function () {
+                    calculateSum4();
+                });
+            });
+            
+             $(".total5").each(function () {
+                $(this).keyup(function () {
+                    calculateSum5();
+                });
+            });
+        });
+        
+        function calculateSum1() {
+            var sum = 0;
+            //iterate through each textboxes and add the values
+            
+            $(".total1").each(function () {
+                //add only if the value is number
+                if (!isNaN($(this).val()) && $(this).val().length != 0) {
+                    sum += parseFloat(this.value);
+                }
+            });
+           
+
+            //.toFixed() method will roundoff the final sum to 2 decimal places
+            $("#sum1").val(sum);
+//$("#sum1").html(sum);
+        }
+
+        function calculateSum2() {
+            var sum = 0;
+            //iterate through each textboxes and add the values
+            
+            $(".total2").each(function () {
+                //add only if the value is number
+                if (!isNaN($(this).val()) && $(this).val().length != 0) {
+                    sum += parseFloat(this.value);
+                }
+            });
+           
+
+            //.toFixed() method will roundoff the final sum to 2 decimal places
+            $("#sum2").val(sum);
+//$("#sum1").html(sum);
+        }
+        
+        function calculateSum3() {
+            var sum = 0;
+            //iterate through each textboxes and add the values
+            
+            $(".total3").each(function () {
+                //add only if the value is number
+                if (!isNaN($(this).val()) && $(this).val().length != 0) {
+                    sum += parseFloat(this.value);
+                }
+            });
+           
+
+            //.toFixed() method will roundoff the final sum to 2 decimal places
+            $("#sum3").val(sum);
+//$("#sum1").html(sum);
+        }
+        
+        function calculateSum4() {
+            var sum = 0;
+            //iterate through each textboxes and add the values
+            
+            $(".total4").each(function () {
+                //add only if the value is number
+                if (!isNaN($(this).val()) && $(this).val().length != 0) {
+                    sum += parseFloat(this.value);
+                }
+            });
+           
+
+            //.toFixed() method will roundoff the final sum to 2 decimal places
+            $("#sum4").val(sum);
+//$("#sum1").html(sum);
+        }
+        
+        function calculateSum5() {
+            var sum = 0;
+            //iterate through each textboxes and add the values
+            
+            $(".total5").each(function () {
+                //add only if the value is number
+                if (!isNaN($(this).val()) && $(this).val().length != 0) {
+                    sum += parseFloat(this.value);
+                }
+            });
+           
+
+            //.toFixed() method will roundoff the final sum to 2 decimal places
+            $("#sum5").val(sum);
+//$("#sum1").html(sum);
+        }
+
+
+
+</script>
+
+</body>
+</html>
